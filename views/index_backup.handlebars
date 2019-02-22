@@ -1,0 +1,100 @@
+<div class="container">
+  {{!-- <div class="row"> --}}
+    {{!-- <span>
+      <button class="btn waves-effect waves-light modal-trigger" href="#usernameModal" id="changeNameButton">Change Username
+        <i class="material-icons left">account_circle</i>
+      </button>
+    </span>
+    <span>
+      <button class="btn waves-effect waves-light modal-trigger" href="#loginModal" id="loginButton">Login
+        <i class="material-icons left">account_circle</i>
+      </button>
+    </span> --}}
+  {{!-- </div> --}}
+  <div class="row">
+    <div class="col l2" id="gameInfo">
+      <div id="games">
+        <h5 class="center-align">Game List</h5>
+        <div id="gameList">
+        </div>
+      </div>
+      <div id="teamMembers">
+        <p>Your codename: <span id="memberYou"></span></p>
+        <h5 class="center-align">Team Members</h5>
+        <div id="memberList">
+        </div>
+      </div>
+    </div>
+    <div class="col s6 l6" id="messages">
+      <h5 class="center-align">Messages</h5>
+      <ul id="messageList">
+      </ul>
+    </div>
+    <div class="col l4" id="gameUI">
+      <p><button class="waves-effect waves-light btn red lighten-1" id="createGameButton"><i class="material-icons left">people</i>Create Strike Team</button></p>
+    </div>
+    <div id="debugDiv" style="display: none;">
+        <p>DEBUG INFO:</p>
+        <p>User ID: <span id="debugID"></span></p>
+        <p>Rooms: 
+          <ul id="debugRooms">
+          </ul>
+        </p>
+        <p id="toastArea"></p>
+      </div>
+  </div>
+  {{!-- <div class="row">
+    <h4>Enter message here!</h4>
+  </div> --}}
+  <div class="row">
+    <div class="input-field">
+      <input id="message" type="text" data-room="lobby" placeholder="Chat here!" autocomplete="off" />
+    </div>
+    <p>Currently talking to: 
+      <div class="chip">
+        <span id="roomName">Lobby</span>
+      </div>
+    </p>
+  </div>
+</div>
+  
+  
+<!-- Modal Structure -->
+{{!-- <div id="usernameModal" class="modal">
+  <div class="modal-content">
+    <h4>Custom Username</h4>
+    <form>
+      <div class="input-field">
+        <input id="usernameInput" type="text">
+        <label for="usernameInput">Desired Username</label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="usernameInputSubmit">Submit<i class="material-icons left">account_circle</i></a>
+  </div>
+</div> --}}
+{{!-- <div id="loginModal" class="modal">
+  <div class="modal-content">
+    <form action="/login" method="POST">
+      <div class="input-field">
+        <input id="username" type="text">
+        <label for="username">Username</label>
+      </div>
+      <div class="input-field">
+        <input id="password" type="password">
+        <label for="password">Password</label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a href="/register" class="modal-close waves-effect waves-green btn-flat" id="registrationButton">Register</a>
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="loginSubmit">Submit<i class="material-icons left">account_circle</i></a>
+  </div>
+</div> --}}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/adjectives.js"></script>
+<script src="/js/animals.js"></script>
+<script src="/js/index.js"></script>

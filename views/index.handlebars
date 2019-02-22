@@ -1,0 +1,80 @@
+<!-- NOTES: -->
+<!-- * Add toasts for round phase changes/status messages.  Investigate auto-dismissal.  Still send chat messages as well for logging purposes -->
+    <nav>
+        <div class="nav-wrapper z-depth-3">
+            <a class="brand-logo center valign-wrapper">The Revolution</a>
+        </div>
+        <div hidden id="debugDiv">
+            <p id="debugID"></p>
+        </div>
+    </nav>
+    <!-- Sidenav -->
+    <div class="row" id="mainBody">
+        <div class="col s8 m8 l8" id="chatColumn">
+            <div class="row">
+                <div id="chatHeader" class="center-align">
+                    <p id="chatHeaderTopSecret">TOP SECRET ------ EYES ONLY</p>
+                    <!-- <div class="col l2 m2 offset-l2 offset-m2">
+                        <p>TOP SECRET</p>
+                    </div>
+                    <div class="col l2 m2 offset-l4 offset-m2">
+                        <p>EYES ONLY</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row" id="codename">
+                <p class="center-align">Codename: <span id="memberYou"></span></p>
+                <div id="messageList">
+                </div>
+            </div>
+            <div class="row" id="chatInput">
+                <div class="input-field" id="chatBox">
+                    <input id="message" type="text" data-room="lobby" placeholder="Transmit Your Message" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+        <div class="col s4 m4 l4 z-depth-1" id="gameInterface">
+            <!-- Game UI -->
+            <div class="row" id="missionStatus">
+                <div class="col">
+                    <!-- Row displaying Mission Bubbles & scores -->
+                    <div class="row" id="roundTracker">
+
+                    </div>
+                    <!-- Row display Vote Bubbles -->
+                    <div class="row" id="voteTracker">
+
+                    </div>
+                </div>
+            </div>
+            <!-- List of Players -->
+            <!-- NOTE: Need to evaluate max height % of displaying 10 players with some vertical padding on top and bottom of list, and set Mission/Vote and Button UIs proportionally -->
+            <div class="row" id="teamMembers">
+                <div class="col">
+                    <ul class="collection center-align">
+                        <li class="collection-item">Gray Fox</li>
+                        <li class="collection-item">Blue Falcon</li>
+                        <li class="collection-item">Red Squirrel</li>
+                        <li class="collection-item">Orange Monkey</li>
+                        <li class="collection-item">Green Shark</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="collection center-align">
+                        <li class="collection-item">Yellow Snake</li>
+                        <li class="collection-item">Indigo Lion</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Voting buttons -->
+            <div class="row valign-wrapper" id="buttons">
+                <button class="waves-effect waves-light btn red lighten-1 right-align" id="createGameButton"><i class="material-icons left">people</i>Create Strike Team</button>
+                {{!-- <img class="responsive-img" id="classifiedImg" src="img/classified.png"> --}}
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/adjectives.js"></script>
+<script src="/js/animals.js"></script>
+<script src="/js/index.js"></script>

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "USIS_1949";
+    src: url("./fonts/USIS_1949.ttf");
+}
+
+body {
+    background-color: #DEB382;
+    color: #000000;
+    height: 100vh;
+    /* overflow: hidden; */
+    font-family: "USIS_1949", Times, serif;
+}
+
+.col .row {
+    margin: 0%;
+    margin-bottom: 0%
+}
+
+nav {
+    background-color: #95642C;
+    z-index: 2;
+    height: 10vh;
+}
+
+nav .brand-logo {
+    color: #FFE0BD
+}
+
+#chatColumn {
+    height: 90vh;
+}
+
+#chatHeader {
+    font-size: 1.5em;
+}
+
+#chatHeaderTopSecret {
+    margin-top: 2%;
+    margin-bottom: 0.5%
+}
+
+#codename {
+    margin: 0%
+}
+
+#messageList {
+    height: 55vh;
+    overflow-y: scroll;
+}
+
+#messageList::-webkit-scrollbar, #navMenu::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+#messageList::-webkit-scrollbar-thumb, #navMenu::-webkit-scrollbar-thumb {
+    background-color: #FFE0BD;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 4px;
+}
+
+#messageList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: var(--black-transparent-20,rgba(0,0,0,0.2));
+    -webkit-border-radius: 4px;
+}
+
+#chatColumn > #chatInput {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 64vw;
+    /* height: 7vh; */
+    border-top: #000000;
+    border-top-style: dotted;
+    border-width: 3px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 1vw;
+}
+
+#chatBox > .input-field {
+    width: 66vw;
+}
+
+#gameInterface {
+    background-color:#B6864E;
+    min-height: 90vh;
+    z-index: 1;
+    padding: 0%;
+    margin: 0%
+}
+
+#missionStatus {
+    height: 25vh;
+}
+
+#teamMembers {
+    border-top: #B65A4E;
+    border-top-style: dashed;
+    border-bottom: #B65A4E;
+    border-bottom-style: dashed;
+    border-width: 3px;
+    height: 45vh;
+    margin: 0%;
+}
+
+#buttons {
+    /* background: url(img/classified.png) no-repeat center center; */
+    height: 20vh;
+    margin: 0%;
+}
+
+#buttons > #createGameButton {
+    left: 28%;
+}
+
+#classifiedImg {
+    position: relative;
+    max-height: 100%
+}
